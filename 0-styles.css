@@ -1,0 +1,68 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 900px;
+}
+
+li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li span.icon {
+    display: block;
+    width: 100px;
+    height: 150px;
+    background-image: url('0-sprite.png'); /* Local sprite file */
+    background-size: 300px 150px; /* Adjust to fit image size */
+    background-repeat: no-repeat;
+    margin-top: 20px;
+}
+
+/* Specific positioning for each icon */
+.i-html {
+    background-position: 0 0; /* First icon (HTML) */
+}
+
+.i-css {
+    background-position: -100px 0; /* Second icon (CSS) */
+}
+
+.i-js {
+    background-position: -200px 0; /* Third icon (JS) */
+}
+
+/* Text Styling */
+li {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
