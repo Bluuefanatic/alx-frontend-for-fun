@@ -1,0 +1,10 @@
+body {
+  color: #3D3D3D; // Default text color for body
+
+  .red {
+    // Text color for .red class elements that are first children of body
+    &:first-child {
+      color: #FF0000;
+    }
+  }
+}
