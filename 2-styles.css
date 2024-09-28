@@ -1,0 +1,84 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.toggle {
+    position: relative;
+}
+
+.toggle-cb {
+    display: none;
+    /* Hide the actual checkbox */
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-inner {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.toggle-switch {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    top: 2.5px;
+    left: 3px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Toggle ON styles */
+.toggle-cb:checked+.toggle-label {
+    background-color: #d50042;
+    /* Red background when checked */
+}
+
+.toggle-cb:checked+.toggle-label .toggle-inner {
+    left: auto;
+    right: 10px;
+    color: white;
+    content: 'Yes';
+    /* Yes label when checked */
+}
+
+.toggle-cb:checked+.toggle-label .toggle-switch {
+    transform: translateX(60px);
+    border-color: #d50042;
+    /* Border color changes when checked */
+}
+
+/* Toggle OFF styles */
+.toggle-label .toggle-inner::before {
+    content: 'No';
+}

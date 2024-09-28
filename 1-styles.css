@@ -1,0 +1,48 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    /* Remove default underline */
+    color: #b20042;
+    /* Color for Holberton */
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    /* Slightly below the text */
+    left: 0;
+    background-color: #b20042;
+    visibility: hidden;
+    /* Hidden by default */
+    transition: width 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+a:hover::after {
+    visibility: visible;
+    width: 100%;
+    /* Expand to full width on hover */
+}
